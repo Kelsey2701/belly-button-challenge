@@ -29,9 +29,6 @@ function optionChanged(selectedID) {
 
     // Update the demographic information
     updateDemographicInfo(metadata);
-
-    // Update the gauge chart (if applicable)
-    // updateGaugeChart(metadata);
   });
 }
 
@@ -123,14 +120,8 @@ function updateDemographicInfo(metadata) {
   // Update with new information
   Object.entries(metadata).forEach(([key, value]) => {
     metadataPanel.append("p").text(`${key}: ${value}`);
-  });
-}
-  var metadataPanel = d3.select("#sample-metadata");
-  metadataPanel.html("");
-  Object.entries(metadata).forEach(([key, value]) => {
-    metadataPanel.append("p").text(`${key}: ${value}`);
-  });
-
+  })
+};
 
 // Call the init function to initialize the page
 init();
